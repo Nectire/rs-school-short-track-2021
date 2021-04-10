@@ -14,7 +14,11 @@
  *
  */
 function renameFiles(/* names */) {
-  throw new Error('Not implemented');
+  // arrNames = [];
+  // for (let i = 0; i < array.length; i++) {
+  //   const element = array[i];
+
+  // }
 }
 
 module.exports = renameFiles;
