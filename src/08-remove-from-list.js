@@ -19,10 +19,8 @@
 
 function removeKFromList(l, k) {
   const tmp = l;
-  while (tmp.value === k) {
-    if (tmp.next !== null) {
-      tmp.next = tmp.next.next;
-    }
+  if (tmp.value === k) {
+    tmp.next = tmp.next.next;
   }
   return tmp;
 }
