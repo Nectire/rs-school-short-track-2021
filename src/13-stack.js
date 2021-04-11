@@ -11,16 +11,26 @@
  *
  */
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
+  constructor() {
+    this.stack = [];
+    this.count = 0;
+  }
+
+  push(element) {
+    this.stack[this.count] = element;
+    this.count++;
+    return this.count - 1;
   }
 
   pop() {
-    throw new Error('Not implemented');
+    if (this.count === 0) return undefined;
+    const delItem = this.stack[this.count - 1];
+    this.count--;
+    return delItem;
   }
 
   peek() {
-    throw new Error('Not implemented');
+    return this.stack[this.count - 1];
   }
 }
 
