@@ -18,7 +18,6 @@ function renameFiles(n) {
   const obj = {};
   n.reduce((prev, curr) => {
     obj[curr] = 1 + (obj[curr] || 0);
-    // if (obj.hasOwnProperty(curr)) {
     if (Object.prototype.hasOwnProperty.call(obj, curr)) {
       if (obj[curr] > 1) {
         const str = `${curr}(${obj[curr] - 1})`;
@@ -32,16 +31,9 @@ function renameFiles(n) {
           arrNames.push(curr);
         }
       }
-      // console.log(length, arrNames, obj);
-      // console.log(obj, 'arrNames: ', arrNames, 'filterArrnames: ', length);
     }
     return n;
   }, '');
-  // let length = arrNames.filter((val) => val.match('/doc(1)/'))
-  // console.log(length);
-  // console.log(obj);
-  // console.log(n);
-  // console.log(arrNames);
   return arrNames;
 }
 

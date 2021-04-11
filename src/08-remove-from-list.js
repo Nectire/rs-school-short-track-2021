@@ -18,10 +18,11 @@
  */
 
 function removeKFromList(l, k) {
-  const tmp = l;
+  let tmp = l;
   if (tmp.value === k) {
-    tmp.next = tmp.next.next;
+    tmp = tmp.next;
   }
+  if (tmp.next) tmp.next = removeKFromList(tmp.next, k);
   return tmp;
 }
 
